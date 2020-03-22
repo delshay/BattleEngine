@@ -4,6 +4,12 @@ import java.util.Random;
 
 public class RandomNumberGenerator {
 
+    private Random random;
+
+    public RandomNumberGenerator() {
+        this.random = new Random();
+    }
+
     /**
      * This is my attempt to generate correct random double in given range.
      *
@@ -12,6 +18,6 @@ public class RandomNumberGenerator {
      * @returnm
      */
     public double fromRange(int min, int max) {
-        return min + (max - min) * new Random().nextDouble();
+        return min + (max - min) * this.random.nextDouble();
     }
 }
