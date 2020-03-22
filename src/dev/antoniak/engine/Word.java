@@ -24,7 +24,8 @@ public class Word {
                 for (Victim v : this.victims) {
 
                     if (randomGen.fromRange(0, 1) < v.escapeChance()) {
-                        System.out.printf("Victim '%s' runaway from monster '%s'.\n", v.name(), m.name());
+                        System.out.printf("Victim '%s' runaway from monster '%s'.\n",
+                                v.name(), m.name());
                         continue;
                     }
 
