@@ -6,7 +6,7 @@ public class Victim {
 
     private String name;
     private double deffence;
-    RandomNumberGenerator randomGen;
+    protected RandomNumberGenerator randomGen;
 
     public Victim(String name, double deffence, RandomNumberGenerator randomGen) {
         this.name = name;
