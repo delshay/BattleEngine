@@ -4,7 +4,7 @@ import dev.antoniak.randomnumbergenerator.RandomNumberGenerator;
 
 public class RandomMonster extends Monster {
 
-    protected RandomNumberGenerator randomGen;
+    private RandomNumberGenerator randomGen;
 
     public RandomMonster(String name, double damage, RandomNumberGenerator randomGen) {
         super(name, damage);
