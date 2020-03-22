@@ -17,6 +17,8 @@ public class Word {
     }
 
     public void run(int rounds) {
+        System.out.println("Battle game - start!");
+
         for (int i = 1; i <= rounds; i++) {
             System.out.println("ROUND_NO " + i);
 
