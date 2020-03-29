@@ -19,6 +19,9 @@ public class Word {
     public void run(int rounds) {
         System.out.println("Battle game - start!");
 
+        double monsterAttack;
+        double victimDeffence;
+
         for (int i = 1; i <= rounds; i++) {
             System.out.println("ROUND_NO " + i);
 
@@ -31,13 +34,15 @@ public class Word {
                         continue;
                     }
 
-                    if (v.deffence() - m.attack() >= 0) {
+                    monsterAttack = m.attack();
+                    victimDeffence = v.deffence();
+                    if (victimDeffence - monsterAttack >= 0) {
                         System.out.printf("Monster '%s' attacked (damage: %f) victim '%s' (deffence: %f). Victim survived.\n",
-                                m.name(), m.attack(), v.name(), v.deffence());
+                                m.name(), monsterAttack, v.name(), victimDeffence);
                     }
                     else {
                         System.out.printf("Monster '%s' attacked (damage: %f) victim '%s' (deffence: %f). Victim id dead.\n",
-                                m.name(), m.attack(), v.name(), v.deffence());
+                                m.name(), monsterAttack, v.name(), victimDeffence);
                     }
                 }
             }
